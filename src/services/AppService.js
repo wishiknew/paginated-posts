@@ -2,7 +2,11 @@ import axios from 'axios';
 
 const getPaginatedPosts = async (pageNumber) => {
   
-  const {data: allPosts} = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  if (!localStorage.allPosts) {
+    const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    localStorage.setItem('allPosts', JSON.stringify(data));
+  } 
+  const allPosts = JSON.parse(localStorage.getItem('allPosts'));
   const posts = allPosts.slice(pageNumber* 20, (pageNumber+1)*20);
   return posts;
 }
