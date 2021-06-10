@@ -1,6 +1,41 @@
 .App {
   text-align: center;
 }
+.home > *{
+  background-color: #282c34;
+}
+
+.posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.post {
+  box-sizing: border-box;
+  flex: 50%;
+  padding: 10%;
+  border:saddlebrown solid;
+}
+.pageNumbers {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+a:active {
+  background-color: yellow;
+}
+.comments {
+  border: solid #61dafb;
+  margin-left: auto;
+  margin-right:auto;
+  width: 80%;
+  text-align: center;
+}
+.comment {
+  border: solid royalblue;
+}
+
 
 .App-logo {
   height: 40vmin;
