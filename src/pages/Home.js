@@ -29,7 +29,7 @@ export default function Home () {
               <Info/>
             </Route>
             <Route exact path="/">
-              <Redirect to={{pathname: "/posts/2"}}/>
+              <Redirect to={{pathname: "/posts/0"}}/>
             </Route>
           </Switch>
         </div>
